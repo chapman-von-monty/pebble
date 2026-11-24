@@ -1,0 +1,27 @@
+name: Test QEMU builds
+
+on:
+  workflow_dispatch:
+jobs:
+  qemu-build:
+    uses: ./.github/workflows/snap.yml
+    with:
+      release-tag: 77275f7bce7156f4c2fc2fc30874b8e271d02c35
+      dry-run-snap-publish: true
+      qemu-amd64: true
+      qemu-arm64: true
+      qemu-armhf: true
+      qemu-ppc64el: true
+      qemu-riscv64: true
+      qemu-s390x: true
+      skip-build: false
+      skip-amd64: false
+      skip-arm64: false
+      skip-armhf: false
+      skip-ppc64el: false
+      skip-riscv64: false
+      skip-s390x: false
+    secrets:
+      LP_CREDENTIALS: ""
+      PEBBLE_DEV_MAILING_LIST: ""
+      SNAPCRAFT_STORE_CREDENTIALS: ""
