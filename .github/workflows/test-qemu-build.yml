@@ -2,7 +2,7 @@ name: Test QEMU builds
 
 on:
   push:
-    branches: [ci/test-qemu-build]
+    branches: [ci/test-qemu-build-run2]
   workflow_dispatch:
 jobs:
   qemu-build:
